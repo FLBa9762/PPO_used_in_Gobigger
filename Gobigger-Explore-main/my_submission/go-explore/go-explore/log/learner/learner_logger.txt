@@ -1,0 +1,256 @@
+[2022-03-23 20:13:26,528][base_learner.py][line: 335][    INFO] [RANK0]: DI-engine DRL Policy
+GoBiggerHybridActionSimpleV3(
+  (activation): ReLU(inplace=True)
+  (encoder): Encoder(
+    (scalar_encoder): Sequential(
+      (0): Linear(in_features=5, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (food_encoder): Sequential(
+      (0): Conv2d(2, 32, kernel_size=(5, 5), stride=(4, 4), padding=(2, 2))
+      (1): ReLU(inplace=True)
+      (2): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ReLU(inplace=True)
+      (4): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+      (5): ReLU(inplace=True)
+    )
+    (food_relation_encoder): Sequential(
+      (0): Linear(in_features=150, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=64, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (thorn_relation_encoder): Sequential(
+      (0): Linear(in_features=12, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (clone_encoder): Sequential(
+      (0): Linear(in_features=17, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (clone_relation_encoder): Sequential(
+      (0): Linear(in_features=12, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (gcn): RelationGCN(
+      (act): ReLU(inplace=True)
+      (thorn_relation_layers): Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+        (1): ReLU(inplace=True)
+      )
+      (clone_relation_layers): Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+        (1): ReLU(inplace=True)
+      )
+      (agg_relation_layers): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU(inplace=True)
+      )
+    )
+    (agg_encoder): Sequential(
+      (0): Linear(in_features=384, out_features=128, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=128, out_features=32, bias=True)
+      (3): ReLU(inplace=True)
+    )
+  )
+  (action_type_head): DiscreteHead(
+    (Q): Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): ReLU(inplace=True)
+        (2): Linear(in_features=32, out_features=32, bias=True)
+        (3): ReLU(inplace=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=32, out_features=16, bias=True)
+      )
+    )
+  )
+)
+[2022-03-23 20:14:04,012][base_learner.py][line: 335][    INFO] [RANK0]: DI-engine DRL Policy
+GoBiggerHybridActionSimpleV3(
+  (activation): ReLU(inplace=True)
+  (encoder): Encoder(
+    (scalar_encoder): Sequential(
+      (0): Linear(in_features=5, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (food_encoder): Sequential(
+      (0): Conv2d(2, 32, kernel_size=(5, 5), stride=(4, 4), padding=(2, 2))
+      (1): ReLU(inplace=True)
+      (2): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ReLU(inplace=True)
+      (4): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+      (5): ReLU(inplace=True)
+    )
+    (food_relation_encoder): Sequential(
+      (0): Linear(in_features=150, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=64, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (thorn_relation_encoder): Sequential(
+      (0): Linear(in_features=12, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (clone_encoder): Sequential(
+      (0): Linear(in_features=17, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (clone_relation_encoder): Sequential(
+      (0): Linear(in_features=12, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (gcn): RelationGCN(
+      (act): ReLU(inplace=True)
+      (thorn_relation_layers): Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+        (1): ReLU(inplace=True)
+      )
+      (clone_relation_layers): Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+        (1): ReLU(inplace=True)
+      )
+      (agg_relation_layers): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU(inplace=True)
+      )
+    )
+    (agg_encoder): Sequential(
+      (0): Linear(in_features=384, out_features=128, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=128, out_features=32, bias=True)
+      (3): ReLU(inplace=True)
+    )
+  )
+  (action_type_head): DiscreteHead(
+    (Q): Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): ReLU(inplace=True)
+        (2): Linear(in_features=32, out_features=32, bias=True)
+        (3): ReLU(inplace=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=32, out_features=16, bias=True)
+      )
+    )
+  )
+)
+[2022-03-23 20:15:37,896][base_learner.py][line: 335][    INFO] [RANK0]: DI-engine DRL Policy
+GoBiggerHybridActionSimpleV3(
+  (activation): ReLU(inplace=True)
+  (encoder): Encoder(
+    (scalar_encoder): Sequential(
+      (0): Linear(in_features=5, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (food_encoder): Sequential(
+      (0): Conv2d(2, 32, kernel_size=(5, 5), stride=(4, 4), padding=(2, 2))
+      (1): ReLU(inplace=True)
+      (2): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (3): ReLU(inplace=True)
+      (4): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+      (5): ReLU(inplace=True)
+    )
+    (food_relation_encoder): Sequential(
+      (0): Linear(in_features=150, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=64, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (thorn_relation_encoder): Sequential(
+      (0): Linear(in_features=12, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (clone_encoder): Sequential(
+      (0): Linear(in_features=17, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (clone_relation_encoder): Sequential(
+      (0): Linear(in_features=12, out_features=32, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=32, out_features=128, bias=True)
+      (3): ReLU(inplace=True)
+    )
+    (gcn): RelationGCN(
+      (act): ReLU(inplace=True)
+      (thorn_relation_layers): Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+        (1): ReLU(inplace=True)
+      )
+      (clone_relation_layers): Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+        (1): ReLU(inplace=True)
+      )
+      (agg_relation_layers): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU(inplace=True)
+      )
+    )
+    (agg_encoder): Sequential(
+      (0): Linear(in_features=384, out_features=128, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=128, out_features=32, bias=True)
+      (3): ReLU(inplace=True)
+    )
+  )
+  (action_type_head): DiscreteHead(
+    (Q): Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): ReLU(inplace=True)
+        (2): Linear(in_features=32, out_features=32, bias=True)
+        (3): ReLU(inplace=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=32, out_features=16, bias=True)
+      )
+    )
+  )
+)
+[2022-03-23 20:16:06,234][base_learner.py][line: 335][    INFO] [RANK0]: === Training Iteration 0 Result ===
+[2022-03-23 20:16:06,235][learner_hook.py][line: 224][    INFO] 
++-------+------------+----------------+-------------+
+| Name  | cur_lr_avg | total_loss_avg | q_value_avg |
++-------+------------+----------------+-------------+
+| Value | 0.001000   | 0.232034       | 0.006589    |
++-------+------------+----------------+-------------+
+[2022-03-23 20:16:06,260][base_learner.py][line: 335][    INFO] [RANK0]: learner save ckpt in ./go-explore/ckpt\iteration_0.pth.tar
+[2022-03-23 20:26:18,950][base_learner.py][line: 335][    INFO] [RANK0]: === Training Iteration 100 Result ===
+[2022-03-23 20:26:18,950][learner_hook.py][line: 224][    INFO] 
++-------+------------+----------------+-------------+
+| Name  | cur_lr_avg | total_loss_avg | q_value_avg |
++-------+------------+----------------+-------------+
+| Value | 0.001000   | 0.207143       | 0.231058    |
++-------+------------+----------------+-------------+
+[2022-03-23 20:36:40,788][base_learner.py][line: 335][    INFO] [RANK0]: === Training Iteration 200 Result ===
+[2022-03-23 20:36:40,788][learner_hook.py][line: 224][    INFO] 
++-------+------------+----------------+-------------+
+| Name  | cur_lr_avg | total_loss_avg | q_value_avg |
++-------+------------+----------------+-------------+
+| Value | 0.001000   | 0.185611       | 0.426902    |
++-------+------------+----------------+-------------+
