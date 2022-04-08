@@ -1,1 +1,2 @@
 # PPO_used_in_Gobigger
+使用了ppo算法实现了gobigger的单智能体训练模型，多智能体方法未实现。
