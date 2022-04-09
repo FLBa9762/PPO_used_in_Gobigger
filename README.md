@@ -7,6 +7,7 @@
 ** 1： *****\envs\<>\Lib\site-packages\DI_engine-0.2.2-py3.8.egg\ding\utils\default_helper.py **
     split_data_generator()
     修改内容：460行-464行，修改 elif isinstance(v, dict)判断为字典类型后的运算，增加函数：gobigger_data_deal(dict_data)
+```python
             elif isinstance(data[k], dict):
                 gobigger_data, gobigger_batch, gobigger_player_num_per_team = gobigger_data_deal(data[k])
                 learn_batch = {k1: v1[indices[i:i + split_size]] for k1, v1 in gobigger_data.items()}
@@ -26,3 +27,4 @@ def gobigger_data_deal(dict_data):  # 拆分出 batch 与 player_num_per_team
     del control_data['batch']
     del control_data['player_num_per_team']
     return control_data, gobigger_batch, gobigger_player_num_per_team
+```
